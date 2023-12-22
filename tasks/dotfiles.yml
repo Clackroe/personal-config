@@ -18,8 +18,7 @@
     - dotfiles
     - stow
 - name: Stow dotfiles
-  become: true
-  shell: cd $HOME/dotfiles && ./ubuntu
+  shell: cd $HOME/dotfiles && ./ubuntu.sh
   tags:
     - install
     - dotfiles
