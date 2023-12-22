@@ -8,7 +8,7 @@
 - name: Cloning dotfiles
   ansible.builtin.git:
     repo: 'git@github.com:Clackroe/dotfiles.git'
-    dest: "{{ lookup('env', 'HOME') }}/testThing/dotfiles"
+    dest: "{{ lookup('env', 'HOME') }}/dotfiles"
     recursive: yes
     update: yes
     accept_hostkey: yes
@@ -19,7 +19,7 @@
     - stow
 - name: Stow dotfiles
   become: true
-  shell: cd $HOME/.dotfiles && ./ubuntu
+  shell: cd $HOME/dotfiles && ./ubuntu
   tags:
     - install
     - dotfiles
